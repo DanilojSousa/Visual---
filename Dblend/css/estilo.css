@@ -1,0 +1,59 @@
+body{
+	background-color: #ddd;
+	font-family: tahoma;
+}
+
+section{
+	width: 800px;
+	margin: auto;
+	padding: 20px;
+	background: #1e1c24;
+	border-radius: 10px;
+	
+	
+			
+}
+div#corpo{
+	height: 350px;
+	background: url('../img/fundo.jpg') 50%;
+	background-clip: content-box;
+	box-shadow: 0px 0px 30px #fff;
+	border-radius: 10px;
+}
+/* Formulario */
+
+div#corpo1{
+	width: 800px;
+	margin: auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0px 0px 30px #777;
+	border-radius: 10px;
+	font-size: 13px;
+}
+div#corpo1 input[type='text'], input[type='date'],input[type='password'],input[type='email'], input[type='tel'], input[type='url'], input[type='file'], input[type='number'], select{
+	background-color: #ddd;
+	border-radius: 3px;
+	box-shadow: 0px 0px 3px #777;
+	margin-top: 10px;
+}
+label{
+	margin-top: 10px;
+	float: right;
+}
+input[type='number']{
+	width: 45px;
+}
+
+div#corpo1 input[type='submit'], input[type='reset']{
+	border-radius: 3px;
+	background-color: #1e1c24;
+	color: #fff;
+	margin-top: 20px;
+}
+input#salvar, input#reset{
+	margin-left: 80px;
+}
+div#corpo1 input[type='submit'], input[type='reset']:hover{
+	cursor: pointer;
+}

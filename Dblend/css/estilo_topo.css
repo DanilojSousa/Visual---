@@ -1,0 +1,99 @@
+nav#topo{
+	width: 100%;
+	height: 140px;
+	background: linear-gradient(#000, #1e1c24);
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+div.menu{
+	width: 400px;
+	margin-left: 80px;
+	padding-top: 20px;
+}
+div.menu ul li{
+	display: inline-block;
+	padding-right: 25px;
+	color: #fff;
+}
+div.menu ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+div.menu ul li a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+div.login{
+	margin-left: 1300px;
+	width: 50px;
+	margin-top: -40px;
+	margin-bottom: 20px;
+	color: #fff;
+}
+div.minhaconta{
+	width: 500px;
+	margin-left: 1100px;
+	margin-top: -40px;
+	margin-bottom: 20px;
+	color: #fff;
+
+}
+div.minhaconta strong{
+	color: green;
+}
+
+div.login a, div.minhaconta a{
+	color: #fff;
+	text-decoration: none;
+
+}
+
+div.login a:hover, div.minhaconta a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+form#pesquisa{
+	width: 350px;
+	height: 30px;
+	margin-left: 650px;
+	color: #fff;
+}
+form input[type='text']{
+	border-radius: 10px;
+}
+div#topogeral{
+    width: 600px;
+    height: 60px;
+    margin-left: 300px;
+    margin-top: -10px;
+}
+div#topo, div#topo1, div#topo2{
+	text-decoration: none;
+	width: 120px;
+    height: 20px;
+    display: inline-block;
+	text-align: center;
+	background: linear-gradient (#1e1c24, #000);
+	border: 1px solid rgb(248, 244, 244);
+	border-radius: 6px;
+	box-shadow: 2px 2px 2px rgb(110, 108, 108);
+	margin-left: 10px;		
+}
+div#topo:hover, div#topo1:hover, div#topo2:hover{
+	width: 125px;
+	height: 25px;
+}
+
+
+div#topo a, div#topo1 a, div#topo2 a{
+text-decoration: none;
+color: rgb(248, 247, 242);
+font-size: 15px;
+letter-spacing: 2px;
+
+}
+
+
+
