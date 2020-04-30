@@ -1,10 +1,10 @@
 <h1>Cadastro Fornecedor</h1>
-<form action="user_cadastro_fornecedor.php" method="post" id="cliente">
+<form action="d_cadastro_fornecedor.php" method="post" id="cliente">
 		<table>
 		<tr><td><Label for="nome">Nome</Label><td><input type="text" name="nome" id="nome" size="40" 
 maxlength="40" required="">*
         <tr><td><label for="telefone">Telefone:</label><td><input type="tel" name="telefone" id="telefone" 
-size="11" maxlength="11" pattern="[0-9]{1'}">
+size="11" maxlength="11" pattern="[0-9]{11}">
 		<tr><td><label for="email">E-Mail:</label><td><input type="email" name="email" id="email" size="30" 
 maxlength="30" placeholder="Digite seu e-mail" required="">*
         <tr><td><label for="uf">UF:</label><td><select name="uf" id="uf" readonly>

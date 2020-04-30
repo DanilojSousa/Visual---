@@ -3,41 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Cadastro de Produto</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link rel="stylesheet" type="text/css" href="estilonotificacao.css">
-	<link rel="stylesheet" type="text/css" href="css/estilorodape.css">
+	<link rel="stylesheet" href="css/cadastro.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-     <style >
-     	div.sucesso{
-	padding: 7px 15px;
-	margin-bottom: 15px;
-	border-radius: 15px;
-	background-color: rgb(226,239,218);
-	color: rgb(74,116,67);
-}
-div.aviso{
-	padding: 7px 15px;
-	margin-bottom: 15px;
-	border-radius: 15px;
-	background-color: rgb(251,248,229);
-	color: rgb(134,110,66);
-}
-div.erro{
-	padding: 7px 15px;
-	margin-bottom: 15px;
-	border-radius: 15px;
-	background-color: rgb(239,223,222);
-	color: rgb(157,75,69);
-}
-a.voltar{
-	text-decoration: none;
-	color: #000;
-	font-size: 20px;
-	Margin-left: 20px;
-}
-
-     </style>
 </head>
 <body>
 	<?php
@@ -51,7 +19,7 @@ a.voltar{
 		 	echo msg_erro("Efetue o <a href='user_login.php'>Login</a> Para poder editar seus dados.");
 		 }else{
 		 	if(!isset($_POST['nome'])){
-		 		require "minhaconta_form.php";
+		 		require "a_minhaconta_form.php";
 		 	}else{
 				$nome = $_POST['nome'] ?? null;
 				$sobrenome = $_POST['sobrenome'] ?? null;
@@ -73,7 +41,7 @@ a.voltar{
 		 				$senha = gerarhash($senha1);
 		 				$q .= ", senha = '$senha'";
 		 			}else{
-		 				echo msg_error("Senhas não conferem. A senha anterior será mantida.");
+		 				echo msg_erro("Senhas não conferem. A senha anterior será mantida.");
 		 			}
 				 }
 		 		$q .= " Where nome ='" . $_SESSION['user'] . "'";
@@ -82,7 +50,7 @@ a.voltar{
 		 			logout();
 		 			echo msg_aviso("Por segurança, efetue o <a href='user_login.php'>Login</a> Novamente.");
 		 		}else{
-		 			echo msg_erro("Não foi possivel alterar os dados. tentar <a href='cadastro_cliente.php.php'>novamente</a>");
+		 			echo msg_erro("Não foi possivel alterar os dados. tentar <a href='a_minhaconta.php'>novamente</a>");
 		 		}
 		 	}
 

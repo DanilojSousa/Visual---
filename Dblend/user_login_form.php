@@ -7,3 +7,4 @@
 	</table>
 	<p>Não possui cadastro? <a href="cadastro_cliente.php"> Cadastra-se</a></p>
 </form>
+<script src="script/alerta.js"></script>

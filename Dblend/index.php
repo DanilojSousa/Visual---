@@ -25,5 +25,6 @@
 
 	<?php $banco->close();?>
 	<?php include "rodape.php";?>
+	
 </body>
 </html>

@@ -1,0 +1,83 @@
+/*----------Estrutura do site----------------*/
+body{
+	background-color: #ddd;
+	font-family: tahoma;
+}
+div#corpo2{
+	width: 900px;
+	margin: auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0px 0px 30px #777;
+	border-radius: 10px;
+	font-size: 13px;
+}
+
+div#corpo1{
+	width: 1300px;
+	margin: auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0px 0px 30px #777;
+	border-radius: 10px;
+	font-size: 13px;
+}
+
+/*----------Relatorio----------------*/
+div#dados1{
+	margin-left: 200px;
+	margin-bottom: 50px;
+
+}
+div#dados{
+	margin-left: 700px;
+	margin-bottom: 50px;
+
+}
+
+div#tabela{
+	margin: auto;
+	
+}
+table#tabela1{
+Border-spacing: 0;
+margin: auto;
+
+}
+table#tabela1 tr, table#tabela1 tr td{
+	height: 25px;
+	margin: auto;
+	Border: 1px solid;
+	padding: 5px;
+}
+tr.titulo td{
+	text-align: center;
+	background: rgb(44, 42, 42);
+	color: white;
+}
+table#tabela1 tr td.lm{
+    text-transform: capitalize;
+    text-align: center;
+}
+table#tabela1 tr td.tm{
+	text-transform: uppercase;
+}  
+table#tabela1 tr td.pm{
+	text-align: center;
+	background: rgb(236, 54, 54);
+	text-transform: uppercase;
+}
+table#tabela1 tr td.sm{
+	text-align: center;
+	background: rgb(52, 204, 39);
+	text-transform: uppercase;
+}
+a.voltar{
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+	Margin-left: 20px;
+}
+a.retorno{
+	text-decoration: none;	
+}

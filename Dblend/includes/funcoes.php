@@ -14,4 +14,5 @@
 	function voltar(){
 		return "<a class='voltar' href='index.php'>MENU</a>";
 	}
+	
 ?>

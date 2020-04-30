@@ -95,9 +95,39 @@ a{
 						$reg = $busca->fetch_object();
 						if (testarhash($s, $reg->senha)){
 							echo msg_sucesso('Logado com sucesso');
+							
 							$_SESSION['user'] = $reg->nome;
 							$_SESSION['nome'] = $reg->sobrenome;
 							$_SESSION['tipo'] = $reg->tipo;
+							if(is_admin()){
+							$q = "SELECT cliente, receita, inclusao_data, data_recebimento, qtd, valor, situacao from contasareceber ";
+							$p = "SELECT fornecedor, despesa, inclusao_data, data_pagamento, qtd, valor, situacao from contasapagar ";
+							
+							$busca = $banco->query($q);	
+							$busca1 = $banco->query($p);
+							$datai =  new DateTime(); 
+							$datainclusao = DATE_FORMAT($datai,'d/m/Y');
+							
+							if(is_admin()){
+							while($reg = $busca->fetch_object()){
+								
+								if($reg->data_recebimento == $datainclusao){
+								$cliente = $reg->cliente;
+								$prazo = "<script>alert('RECEITA: $cliente - Possui pagamento vencido no valor R$ $reg->valor')</script>";
+								echo $prazo;
+								}
+							}
+							while($reg = $busca1->fetch_object()){
+								if($reg->data_pagamento == $datainclusao){
+								$fornecedor = $reg->fornecedor;
+								$prazo1 = "<script>alert('DESPESA: $fornecedor - Possui pagamento vencido no valor R$ $reg->valor')</script>";
+								echo $prazo1;
+								}
+							}
+						}
+					}
+			
+							
 						}else{
 							echo msg_erro('Senha invalida');
 						}
@@ -106,9 +136,11 @@ a{
 						}
 					}
 			}
-			echo '<a class="menu" href="index.php">MENU</a>';
+			
+			echo "<a class='menu' href='index.php'>MENU </a>";
+			
 		?>
 	</div>
-	<?php $banco->close();?>
+	<script src="script/alerta.js"></script>
 </body>
 </html>

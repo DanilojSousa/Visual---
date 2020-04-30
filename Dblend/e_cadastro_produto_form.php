@@ -1,6 +1,6 @@
 
 <h1>Cadastro Produto</h1>
-<form action="user_cadastro_produto.php" method="post" id="cliente">
+<form action="e_cadastro_produto.php" method="post" id="cliente">
 	<table>
 		<tr><td><label for="descricao">Descrição:</label><td><input type="text" name="descricao" id="descricao" size="50" maxlength="50" required="">
 		<tr><td><label for="categoria">Categoria:</label><td><select name="categoria" id="categoria" required="">

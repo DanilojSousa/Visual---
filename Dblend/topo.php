@@ -5,35 +5,57 @@
 	<title>Topo</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	  rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/estilo_topo.css">
+	<link rel="stylesheet" href="css/estilotopo.css">
+	<style>
+
+	</style>
 </head>
 <body>
+	<?php
+		require_once "includes/banco.php";
+		require_once "includes/funcoes.php";
+		require_once "includes/login.php";
+	?>
 	<header>
 		<nav id="topo">
+			
 			<?php
-			echo "<div class='menu'><ul><li><a href='index.php'>Home</a></li><li><a href='index.php'>Serviço</a></li><li><a href='index.php'>Contato</a></li><li><a href='index.php'>Agendamento</a></li></ul></div>";
+			// Menu Principal
+			echo "<div id='menu'><form><a href='index.php'><input type='button' value='home' id='menu1'></a><a href='index.php'><input type='button' value='serviço'  id='menu1'></a><a href='index.php'><input type='button' value='contato'  id='menu1'></a><a href='index.php'><input type='button' value='agendamento'  id='menu1'></a></div></form>";
+			
 			?> 
+		
+			
 			<?php
+			// Menu de acesso
 			 	if (empty($_SESSION['user'])){
-			 		echo "<div class='login'><a href='user_login.php'>Entrar</a></div>";
+					echo "<div id='login' <form>";
+					 echo "<a href='user_login.php'><input type='button' value='entrar' id='menulogin'></a>";
+					 echo "</div>";
 			 	}else{
-			 		echo "<br/><div class='minhaconta'>Seja bem vindo, <strong> " , $_SESSION['user'] ,  "</strong> | <a href='minhaconta.php'>Minha Conta </a>|<a href='user_logout.php'> Sair </a></div>";
+					echo "<div id='minhaconta'";
+					 echo "<span>Seja bem vindo,  </span> <strong> ", $_SESSION['user'] ,"</strong><a href='a_minhaconta.php'><input type='button' value='minha conta'  id='menu2'></a><a href='user_logout.php'><input type='button' value='sair'  id='menusair'> </a>";
+					 echo "</form></div>";
 			 	}
 			 ?>
 			 <?php
-			echo "<form method='post' action='.php' id='pesquisa'> Pesquisa: <input type='text' id='pesquisa' name='pesquisa' size='20' maxlength='30'</form>"; 
+			// Menu de controles
 			 if((is_admin() || is_editor()) && (is_logado())){
 				echo "<div id='topogeral'>";
+				echo "<form method='post' action='topo.php'>";
 				if(is_admin()){
-					echo "<div id='topo'><a href='financeiro.php'>Financeiro</a></div>";
+					echo "<a href='financeiro.php'><input type='button' value='financeiro' id='menu3'></a>";  
 				}
-				echo "<div id='topo1'><a href='cadastro.php'> Cadastro</a></div>";
-				echo "<div id='topo2'><a href='relatorio.php'> Relatorio</a></div>";
+				echo "<a href='cadastro.php'><input type='button' value='cadastro' id='menu3'></a>";
+				echo "<a href='relatorio.php'><input type='button' value='relatorio' id='menu3'></a>";
+				echo "</form>";
 				echo "</div>";
+				
 			 }
 		
 			?>
 		</nav>
 </header>
+<script src="script/alerta.js"></script>
 </body>
 </html>

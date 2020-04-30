@@ -1,0 +1,73 @@
+/*----------Estrutura do site----------------*/
+body{
+	background-color: #ddd;
+	font-family: tahoma;
+}
+
+div#corpo1{
+	width: 630px;
+	margin: auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0px 0px 30px #777;
+	border-radius: 10px;
+	font-size: 13px;
+}
+/*----------Menu Relatorio----------------*/
+div#geral{
+    width: 700px;
+    height: 60px;
+    margin: auto;
+    margin-top: 50px;
+	
+	}
+	#menu2{
+		display: inline-block;
+		
+	}
+	#menu2{
+	width: 130px;
+    height: 30px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	margin-left: 20px;
+	text-transform: capitalize;
+	color: rgb(7, 7, 8);
+	background: linear-gradient(rgb(245, 241, 241), #605f61);
+	border-radius: 3px;
+	
+}
+
+
+/*----------Menu Relatorio Financeiro ----------------*/
+div#tipo a.receita, a.despesa{
+	display: block;
+}
+div#tipo input[type="submit"]{
+    width: 120px;
+    height: 30px;
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	margin-top: 10px;
+	margin-left: 180px;
+	color: rgb(244, 244, 250);
+	border-radius: 3px;
+	}
+
+div#tipo a.receita input[type="submit"]{
+    background: rgb(3, 92, 10);
+}
+div#tipo a.despesa input[type="submit"]{
+    background: rgb(192, 7, 7);
+}
+a.voltar{
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+	Margin-left: 20px;
+}
+a.retorno{
+	text-decoration: none;	
+}
+

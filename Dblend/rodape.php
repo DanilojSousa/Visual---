@@ -10,7 +10,7 @@
 <body>
 		<?php
 		echo "<footer>";
-		echo "<p> Acessado por ", $_SERVER['REMOTE_ADDR'] ," em " , date('d/m/Y h:i:s') , "</p>";
+		echo "<p> Acessado por ", $_SERVER['REMOTE_ADDR'] ," em " , date('d/m/Y H:i:s') , "</p>";
 		echo "<p> Desenvolvido por <strong>VISUAL ++</strong> @copy; 2020</p>";
 		echo "</footer";
 		?>

@@ -3,43 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Cadastro de Cliente</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link rel="stylesheet" type="text/css" href="estilonotificacao.css">
-	<link rel="stylesheet" type="text/css" href="css/estilorodape.css">
+	<link rel="stylesheet" type="text/css" href="css/cadastro.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-          <style>
-div.sucesso{
-	padding: 7px 15px;
-	margin-bottom: 15px;
-	border-radius: 15px;
-	background-color: rgb(226,239,218);
-	color: rgb(74,116,67);
-}
-div.aviso{
-	padding: 7px 15px;
-	margin-bottom: 15px;
-	border-radius: 15px;
-	background-color: rgb(251,248,229);
-	color: rgb(134,110,66);
-}
-div.erro{
-	padding: 7px 15px;
-	margin-bottom: 15px;
-	border-radius: 15px;
-	background-color: rgb(239,223,222);
-	color: rgb(157,75,69);
-}
-a.voltar{
-	text-decoration: none;
-	color: #000;
-	font-size: 20px;
-	Margin-left: 20px;
-}
-a.retorno{
-	text-decoration: none;	
-}
-      </style>
 </head>
 <body>
 	<?php
@@ -53,7 +19,7 @@ a.retorno{
 			if(!is_logado()){
                 echo msg_erro("Efetue o <a href='user_login.php'>Login</a> Para poder editar seus dados.");
             }else if(!isset($_POST['sobrenome'])){
-                require "cadastro_cliente_form.php";
+                require "b_cadastro_cliente_form.php";
             }else{		
 			$nome = $_POST['nome'] ?? null;
 			$sobrenome = $_POST['nome'] ?? null;
@@ -78,7 +44,7 @@ a.retorno{
 			$q = "INSERT INTO cliente (nome, sobrenome, email, nascimento, telefone, cidade, uf, endereco, link, senha, tipo) values ('$nome','$sobrenome','$email','$nascimento','($form1) $form2-$form3','$cidade','$uf','$endereco','$link','$senha','$tipo')";
 	
 			if($banco->query($q)){
-                    echo msg_sucesso("Cliente cadastrado com sucesso! Continuar <a class='retorno' href='user_cadastro_cliente.php'>cadastrando</a>?");
+                    echo msg_sucesso("Cliente cadastrado com sucesso! Continuar <a class='retorno' href='b_cadastro_cliente.php'>cadastrando</a>?");
                     
                    		
 			}else{
